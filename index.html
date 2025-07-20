@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vignesh Shelke - Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  line-height: 1.6;
+}
+
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  background: #0f172a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .logo {
+      color: #38bdf8;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    .btn-cv {
+      background: #f472b6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  min-height: 100vh;
+}
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 28px;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .hero-text h3 {
+      font-size: 20px;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .hero-text .buttons button,
+    .hero-text .buttons a {
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-right: 10px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .hero-text .buttons .hire {
+      background: #38bdf8;
+      color: white;
+    }
+
+    .hero-text .buttons .contact {
+      background: transparent;
+      color: white;
+      border: 1px solid #38bdf8;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      max-width: 300px;
+      border-radius: 50%;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 0 30px #38bdf8;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      padding: 0 60px;
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 24px;
+      color: #38bdf8;
+    }
+
+    .stat-box p {
+      font-size: 14px;
+    }
+    html {
+    scroll-behavior: smooth;
+  }
+
+  #typewriter::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+.animated-gradient-text {
+  background: linear-gradient(270deg, #a855f7, #ec4899, #38bdf8);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+</head>
+<body style="padding-top: 120px;">
+  <header data-aos="fade-down">
+    <div class="logo">Portfolio</div>
+    <nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Hello, I'm</h1>
+      <h2>Vignesh Shelke</h2>
+      <h3 id="typewriter"></h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tempora possimus voluptate quasi reprehenderit, voluptatem explicabo a id pariatur!</p>
+      <div class="buttons">
+        <button class="hire">Hire Me</button>
+        <a href="#" class="contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+  <div style="width:300px; height:300px; background:#1e293b; border-radius:50%; display:flex; align-items:center; justify-content:center; border: 3px solid #38bdf8; box-shadow: 0 0 30px #38bdf8; text-align:center; font-size: 18px; color:#38bdf8; padding: 20px;">
+    <span>Design. Code. Repeat. 🚀</span>
+  </div>
+</div>
+  </section>
+
+  <section id="about" style="padding: 100px 60px; background-color: #1e293b;" data-aos="fade-up">
+  <h2 style="font-size: 32px; margin-bottom: 20px; color: #38bdf8;">About Me</h2>
+  <p style="max-width: 800px; font-size: 16px; line-height: 1.8;">
+    I'm Vignesh Shelke, a passionate and results-driven Web Developer with over 10 years of experience crafting modern, responsive websites. I specialize in creating seamless user experiences using HTML, CSS, JavaScript, and modern frontend frameworks.
+    <br /><br />
+    My goal is to bring ideas to life through elegant design and clean, efficient code. Whether it's building from scratch or optimizing existing systems, I always focus on quality, performance, and user satisfaction.
+  </p>
+</section>
+
+  <section id="skills" style="padding: 100px 60px; background-color: #0f172a;" data-aos="fade-up">
+  <h2 class="animated-gradient-text" style="font-size: 32px; margin-bottom: 40px; text-align: center;">My Skills</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; max-width: 1000px; margin: auto;">
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" style="width:24px; vertical-align:middle; margin-right:6px;">HTML</h3>
+      <p>Semantic & SEO Friendly</p>
+    </div>
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" style="width:24px; vertical-align:middle; margin-right:6px;">CSS</h3>
+      <p>Flexbox, Grid, Animations</p>
+    </div>
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width:24px; vertical-align:middle; margin-right:6px;">JavaScript</h3>
+      <p>ES6+, DOM, Fetch API</p>
+    </div>
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="width:24px; vertical-align:middle; margin-right:6px;">React</h3>
+      <p>Hooks, Components, JSX</p>
+    </div>
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind" style="width:24px; vertical-align:middle; margin-right:6px;">Tailwind</h3>
+      <p>Utility First CSS</p>
+    </div>
+    <div style="background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #38bdf8; position: relative; grid-column: 1 / -1; max-width: 200px; margin: 0 auto;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width:24px; vertical-align:middle; margin-right:6px;">Git</h3>
+      <p>Version Control</p>
+    </div>
+  </div>
+</section>
+
+  <section id="services" style="padding: 100px 60px; background-color: #1e293b; color: white;" data-aos="fade-up">
+  <h2 class="animated-gradient-text" style="font-size: 32px; margin-bottom: 40px; text-align: center;">My Services</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+    <div style="background: #0f172a; padding: 30px; border-radius: 12px; border: 2px solid #38bdf8; text-align: center; position: relative; box-shadow: 0 0 0 3px transparent;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: 100%; height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: 100%; height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+      Crafting fully responsive, fast-loading, and secure websites using technologies like HTML, CSS, JavaScript, and modern frameworks such as React and Tailwind. From landing pages to dynamic SPAs, I build with performance in mind.</p>
+    </div>
+    <div style="background: #0f172a; padding: 30px; border-radius: 12px; border: 2px solid #38bdf8; text-align: center; position: relative;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+      Creating user-focused designs that balance aesthetics and functionality. I use design tools and research techniques to ensure that every interface is intuitive, beautiful, and effective.</p>
+    </div>
+    <div style="background: #0f172a; padding: 30px; border-radius: 12px; border: 2px solid #38bdf8; text-align: center; position: relative; box-shadow: 0 0 0 3px transparent;">
+  <div style="position: absolute; top: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; bottom: -10px; left: -10px; width: calc(100% + 20px); height: 5px; background: linear-gradient(90deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; left: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #a855f7, #ec4899); border-radius: 6px;"></div>
+  <div style="position: absolute; top: -10px; right: -10px; width: 5px; height: calc(100% + 20px); background: linear-gradient(180deg, #ec4899, #a855f7); border-radius: 6px;"></div>
+  Revamping outdated websites with modern layouts, improved user experience, and optimized performance. Whether it's a personal blog or business site, I elevate your online presence.</p>
+    </div>
+  </div>
+</section>
+  </section>
+
+  
+
+  <section id="contact" style="padding: 100px 60px; background-color: #0f172a; color: white;" data-aos="fade-up">
+  <h2 class="animated-gradient-text" style="font-size: 32px; margin-bottom: 40px; text-align: center;">Contact Me</h2>
+  <form style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" placeholder="Your Name" required style="padding: 12px; border: none; border-radius: 8px; background: #1e293b; color: white;" />
+    <input type="email" placeholder="Your Email" required style="padding: 12px; border: none; border-radius: 8px; background: #1e293b; color: white;" />
+    <textarea placeholder="Your Message" rows="5" required style="padding: 12px; border: none; border-radius: 8px; background: #1e293b; color: white;"></textarea>
+    <button type="submit" style="padding: 12px; background: linear-gradient(90deg, #a855f7, #ec4899); border: none; border-radius: 8px; color: white; font-weight: bold;">Send Message</button>
+  </form>
+</section>
+
+  <section class="stats" data-aos="zoom-in">
+    <div class="stat-box">
+      <h3>10+</h3>
+      <p>Years experience</p>
+    </div>
+    <div class="stat-box">
+      <h3>30+</h3>
+      <p>Projects completed</p>
+    </div>
+    <div class="stat-box">
+      <h3>5+</h3>
+      <p>Technologies mastered</p>
+    </div>
+    <div class="stat-box">
+      <h3>100+</h3>
+      <p>Clients served</p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    const words = ["Web Developer", "UI/UX Specialist", "Web Designer", "Frontend Expert"];
+    let currentWord = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    const typeEl = document.getElementById("typewriter");
+
+    function type() {
+      const word = words[currentWord];
+      if (isDeleting) {
+        currentChar--;
+      } else {
+        currentChar++;
+      }
+
+      typeEl.textContent = word.substring(0, currentChar);
+
+      if (!isDeleting && currentChar === word.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+      } else if (isDeleting && currentChar === 0) {
+        isDeleting = false;
+        currentWord = (currentWord + 1) % words.length;
+        setTimeout(type, 200);
+      } else {
+        setTimeout(type, isDeleting ? 60 : 120);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
